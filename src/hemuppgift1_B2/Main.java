@@ -6,18 +6,12 @@ public class Main {
 		int test = 0;
 		int deviation = 0;
 
-		int nbrtests = 10000;
+		int nbrtests = 1000;
 		double lambda = 3.66;
 		
-		//Om man nollställer cs i calculateMean behöver man inte skapa tusen objekt lol men orkar inte ändra
 		
 		for(int i=0; i<nbrtests; i++){
 
-		
-		
-		//Om man nollställer cs i calculateMean behöver man inte skapa tusen objekt lol men orkar inte ändra
-		
-		
 
 			CoinSimulator cs = new CoinSimulator(20,7,1);
 			test += cs.calculateMean();
