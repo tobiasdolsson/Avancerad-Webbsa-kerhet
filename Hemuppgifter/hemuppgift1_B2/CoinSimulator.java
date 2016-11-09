@@ -33,11 +33,7 @@ public class CoinSimulator {
 			}
 			numberOfThrows++;		
 		}
-<<<<<<< Updated upstream
-		
-=======
-		//System.out.println("lådor " + bins.length);
->>>>>>> Stashed changes
+
 		return numberOfThrows;
 	}
 	
