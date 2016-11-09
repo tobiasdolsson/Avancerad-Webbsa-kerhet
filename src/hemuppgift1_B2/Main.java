@@ -8,26 +8,18 @@ public class Main {
 
 		int nbrtests = 1000;
 		double lambda = 3.66;
-		
+		CoinSimulator cs = new CoinSimulator(20,7,1);
 		
 		for(int i=0; i<nbrtests; i++){
-
-
-			CoinSimulator cs = new CoinSimulator(20,7,1);
+		
 			test += cs.calculateMean();
 			//deviation += cs.calculateDeviation(322);
 			//cs.visualizeArray();
 			System.out.println(i);
 		}
 		
-
 		System.out.println(test/nbrtests);
-
-
-		//System.out.println(deviation/1000);		
-		//System.out.println(cs.calculateMean());
 		//cs.visualizeArray();
-		
-	}
+		}
 
 }

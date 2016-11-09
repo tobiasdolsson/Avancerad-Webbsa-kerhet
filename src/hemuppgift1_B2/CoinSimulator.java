@@ -13,12 +13,13 @@ public class CoinSimulator {
 		this.u = u;
 		this.k = k;
 		this.c = c;
-		bins = new int[(int) Math.pow(2,u)];
-		currentCoins = 0;
-		numberOfThrows = 0;
+		
 	}
 	
 	public int calculateMean(){
+		bins = new int[(int) Math.pow(2,u)];
+		currentCoins = 0;
+		numberOfThrows = 0;
 		
 		Random rand = new Random();
 		int currentBin;
