@@ -7,17 +7,17 @@ public class Main {
 		int nbrOfTests = 0;
 		int minIterations = 10;
 		double currentCI;
-		int ci = 24;
+		int ci = 15616;
 
-		CoinSimulator cs = new CoinSimulator(16, 2, 100);
+		CoinSimulator cs = new CoinSimulator(20, 7, 100);
 
 		while (true) {
 
 			cs.calculateMean();
 			currentCI = cs.calculateCIWidth();
 			nbrOfTests++;
-			//System.out.println("Current width: "+currentCI);			
-			//System.out.println("Number of iterations :" + nbrOfTests);
+			System.out.println("Current width: "+currentCI);			
+			System.out.println("Number of iterations :" + nbrOfTests);
 			if (currentCI != 0 && currentCI < ci && nbrOfTests > minIterations) {
 				System.out.println("Number of iterations :" + nbrOfTests);
 				break;

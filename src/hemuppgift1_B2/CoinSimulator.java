@@ -1,12 +1,14 @@
 package hemuppgift1_B2;
 
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 
 public class CoinSimulator {
 
-	public int u, k, c, currentCoins, numberOfThrows, mean, n;
+	public int u, k, c, currentCoins, numberOfThrows, n;
+	public BigInteger mean, bign;
 	public double variance, deviation, width;
 	public double lambda;
 	int[] bins;
@@ -39,20 +41,30 @@ public class CoinSimulator {
 			numberOfThrows++;
 		}
 		data.add(numberOfThrows);
+		// System.out.println("number of throws: "+numberOfThrows);
 		return numberOfThrows;
 	}
 
 	public double calculateCIWidth() {
 		variance = 0;
 		deviation = 0;
-		mean = 0;
+		mean = new BigInteger("0");
+		Integer test = new Integer(data.size());
+		String test2 = test.toString();
+		bign = new BigInteger(test2);
 		n = data.size();
 		for (int i = 0; i < n; i++) {
-			mean += data.get(i);
+			String datatest = data.get(i).toString();
+			BigInteger temp = new BigInteger(datatest);
+			mean = mean.add(temp) ;
+
 		}
-		mean = mean / n;
+
+		mean = mean.divide(bign);
+
+		System.out.println("mean throws: " + mean);
 		for (int i : data) {
-			variance += ((i - mean) * (i - mean));
+			variance += ((i - mean.intValue()) * (i - mean.intValue()));
 		}
 
 		variance = variance / data.size();
