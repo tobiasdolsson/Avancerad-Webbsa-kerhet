@@ -38,8 +38,8 @@ public class CoinSimulator {
 		return numberOfThrows;
 	}
 	
-	public int calculateDeviation(int mean){
-		return numberOfThrows-mean;
+	public int calculateVariance(int mean, int n){
+		return ((numberOfThrows-mean)*(numberOfThrows-mean))/n;
 	}
 	//Debug purposes
 	public void visualizeArray(){
