@@ -23,9 +23,7 @@ public class CoinSimulator {
 		Random rand = new Random();
 		int currentBin;
 		//System.out.print(rand.nextInt(bins.length));
-		
-		
-		
+				
 		while(currentCoins < c){
 			
 			currentBin = rand.nextInt(bins.length);
@@ -35,14 +33,16 @@ public class CoinSimulator {
 			}
 			numberOfThrows++;		
 		}
-		
+		System.out.println("lådor " + bins.length);
 		return numberOfThrows;
 	}
 	
+	public int calculateDeviation(int mean){
+		return numberOfThrows-mean;
+	}
+	//Debug purposes
 	public void visualizeArray(){
 		System.out.println(Arrays.toString(bins));		
 	}
 	
-	
-
 }
