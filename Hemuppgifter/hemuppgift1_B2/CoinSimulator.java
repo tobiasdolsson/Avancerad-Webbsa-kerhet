@@ -33,7 +33,7 @@ public class CoinSimulator {
 			}
 			numberOfThrows++;		
 		}
-		System.out.println("lådor " + bins.length);
+		
 		return numberOfThrows;
 	}
 	
