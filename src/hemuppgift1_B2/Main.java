@@ -9,7 +9,7 @@ public class Main {
 		//Om man nollställer cs i calculateMean behöver man inte skapa tusen objekt lol men orkar inte ändra
 		
 		for(int i=0; i<1000; i++){
-			CoinSimulator cs = new CoinSimulator(16,2,1);
+			CoinSimulator cs = new CoinSimulator(16,7,1);
 			test += cs.calculateMean();
 			//deviation += cs.calculateDeviation(322);
 			//cs.visualizeArray();
