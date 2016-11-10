@@ -47,41 +47,23 @@ public class CoinSimulator {
 	}
 
 	public double calculateMean() {
-		/*
-		 * mean = new BigInteger("0"); Integer size = new Integer(data.size());
-		 * String sizeString = size.toString(); bigSize = new
-		 * BigInteger(sizeString);
-		 */
+
 		n2 = data.size();
 		longMean = 0;
 		for (int i = 0; i < n2; i++) {
-			// String dataValue = data.get(i).toString();
-			// BigInteger value = new BigInteger(dataValue);
-			// mean = mean.add(value);
+
 			longMean = longMean + data.get(i);
 		}
-		// mean = mean.divide(bigSize);
+
 		longMean = longMean / n2;
-		// System.out.println(longMean);
+		
 		return longMean;
 	}
 
 	public double calculateCIWidth(double m) {
 		variance = 0;
 		deviation = 0;
-		/*
-		 * mean = new BigInteger("0"); Integer test = new Integer(data.size());
-		 * String test2 = test.toString(); bign = new BigInteger(test2); n =
-		 * data.size(); for (int i = 0; i < n; i++) { String datatest =
-		 * data.get(i).toString(); BigInteger temp = new BigInteger(datatest);
-		 * mean = mean.add(temp) ;
-		 * 
-		 * }
-		 * 
-		 * mean = mean.divide(bign);
-		 */
 
-		// System.out.println("mean throws: " + mean);
 		for (int i : data) {
 			variance = variance + ((i - m) * (i - m));
 		}
