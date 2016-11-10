@@ -19,7 +19,6 @@ public class CoinSimulator {
 		this.c = c;
 		lambda = 3.66;
 		data = new ArrayList<Integer>();
-
 	}
 
 	public int calculateThrows() {
@@ -54,7 +53,7 @@ public class CoinSimulator {
 		}
 
 		longMean = longMean / n2;
-		
+
 		return longMean;
 	}
 

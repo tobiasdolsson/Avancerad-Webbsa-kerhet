@@ -7,21 +7,19 @@ public class Main {
 		int nbrOfTests = 0;
 		int minIterations = 10;
 		double currentCI = 0;
-		int ci = 3000;
 
-		CoinSimulator cs = new CoinSimulator(20, 7, 10000);
+		int ci = 22;
+		CoinSimulator cs = new CoinSimulator(16, 2, 1);
 		final long startTime = System.currentTimeMillis();
 		while (true) {
 
 			cs.calculateThrows();
 			nbrOfTests++;
-
 			currentCI = cs.calculateCIWidth(cs.calculateMean());
-
-			System.out.println("Current width: " + currentCI);
+			// System.out.println("Current width: " + currentCI);
 			// System.out.println("Number of iterations :" + nbrOfTests);
 			if (currentCI != 0 && currentCI < ci && nbrOfTests > minIterations) {
-				System.out.println("Number of iterations :" + nbrOfTests);
+				System.out.println("Number of iterations: " + nbrOfTests);
 				break;
 			}
 
@@ -30,7 +28,7 @@ public class Main {
 		System.out.println("c.i width: " + cs.calculateCIWidth(cs.calculateMean()));
 		cs.anounceMean();
 		final long endTime = System.currentTimeMillis();
-		System.out.println("Total execution time: " + (endTime - startTime)/1000+"s" );
+		System.out.println("Total execution time: " + (endTime - startTime) / 1000.0 + "s");
 
 	}
 
