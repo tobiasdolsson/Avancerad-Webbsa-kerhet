@@ -1,19 +1,17 @@
 package hemuppgift1_B2;
 
-import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 
 public class CoinSimulator {
 
-	public int u, k, c, currentCoins, numberOfThrows, n, n2;
-	public BigInteger mean, bign, bigSize;
-	public double variance, deviation, width;
-	public double lambda;
-	public long longMean;
+	private int u, k, c, currentCoins, numberOfThrows, n2;
+	private double variance, deviation;
+	private double lambda;
+	private long longMean;
 	int[] bins;
-	public ArrayList<Integer> data;
+	private ArrayList<Integer> data;
 
 	public CoinSimulator(int u, int k, int c) {
 		this.u = u;
@@ -74,7 +72,7 @@ public class CoinSimulator {
 	}
 
 	public void anounceMean() {
-		System.out.println("final mean throws: " + longMean);
+		System.out.println("Mean throws: " + longMean);
 	}
 
 	// Debug purposes
